@@ -1,0 +1,454 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+.upper-container {
+    background-color: white;
+    box-shadow: 0 5px 4px rgba(0, 0, 0, 0.1);
+    height: 10%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+}
+
+.upper-container1 {
+    width: 60%;
+    height: 100%;
+    padding-top: 27px;
+    padding-bottom: 27px;
+    padding-left: 120px;
+}
+
+.upper-container2{
+    position: absolute;
+      top: 0%;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 100vh;
+      background-color: #f2f2f2;
+     
+} 
+
+
+#Tasks{
+font-weight: bold;
+font-size: 2.5rem;
+color: rgb(44, 44, 44);
+}
+
+#setpos{
+position: relative;
+padding-top:7%;
+padding-left: 36%;
+display: flex;
+}
+
+#list {
+font-size: 2.5rem;
+margin-left:10px ;
+font-weight: bold;
+color: rgb(0, 156, 253);
+}
+
+#addlist{
+    position: inherit;
+    width: 80%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    font-size: 25px;
+    opacity: 0.5;
+    padding-top: 25px;
+    line-height: 0;
+    
+}
+#pos{
+    position: relative;
+   left: 18%;
+}
+#back{
+            padding-top: 21px;
+            line-height: 0;
+}
+.pos1{
+    position: relative;
+    left:18%;
+}
+.separator {
+    border-top: 1px solid #ccc;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+.card1{
+    left: 35%;
+    border: 1.5px solid rgb(212, 212, 212); 
+    height: 45vh;
+    width: 26.33%;
+    position: relative;
+    border-radius: 8px;
+    margin: 30px;
+    background-color: white;
+    box-sizing: border-box;
+}
+.custom-link{
+    text-decoration: none;
+  color: inherit;
+}
+.div1{
+    padding: 10% 10% 3% 10%;
+    font-size: large;
+    font-weight: bold;
+    color: #00A5EC;
+    
+}
+.div2{
+    font-size: large;
+    padding: 3% 10% 3% 10%;
+    
+}
+.div3{
+    font-size: large;
+    padding: 3% 10% 3% 10%;
+}
+#check{
+    scale: 2;
+}
+.disabled{
+pointer-events: none;
+opacity: 0.5;
+text-decoration: line-through;
+color: #636161;
+
+}
+#space{
+    padding: 0% 2% 0% 0%
+}
+
+.notshow{
+    filter:  brightness(40%);
+    -webkit-filter: brightness(40%);
+    pointer-events: none;
+   }
+   .pop-up{
+       position: absolute;
+       height: 25vh;
+       width: 27%;
+       border: 1.5px solid grey;
+       border-radius: 10px;
+       left: 36.5%;
+       top: 20%;
+       background-color: white;
+       display: none;
+   }
+   #add-new{
+       font-size: 25px;
+       font-weight: 500;
+       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+       padding: 15px 15px 1px 15px;
+   }
+   .pop-upbar {
+       width: 90%;
+       border: 1.5px solid lightgrey;
+       border-radius: 5px;
+       height: 40px;
+       font-size: 25px;
+       padding-left: 10px;
+       padding-right: 5px;
+       padding-top: 5px;
+       resize: none;
+       background-color: rgb(238, 238, 238);
+       color: rgb(107, 107, 107);
+   }
+   .pop-upbar:focus{
+       color: black;
+       background-color: white;
+   }
+   .pop-up-button{
+       padding: 12px 40px 12px 40px;
+       font-size: larger;
+       color: white;
+       background-color: #00A5EC;
+       border: none;
+       border-radius: 5px;
+       margin-top: 16px;
+       margin-left: 61%;
+   }
+   #exitButton{
+       position: absolute;
+       left: 90%;
+       top: 9%;
+       width: 30px;
+       height: 30px;
+       border: none;
+       cursor: pointer;
+       color: grey;
+       font-size: larger;
+       background-color: white;
+   }
+   #exitButton:hover{
+       scale: 1.2;
+       background-color: #ccc;
+       border-radius: 4px;
+   }
+   
+
+   /*media -smaller screens*/
+   @media (min-width:1600px) and (max-width:1750px){
+    .pop-up{
+        height: 32vh;
+    }
+    .pop-up-button{
+        margin-left: 55%;
+}}
+@media (min-width:1200px) and (max-width:1600px){
+    .pop-up{
+        height: 28vh;
+        width: 30%;
+        left: 35%;
+    }
+    .pop-up-button{
+        margin-left: 45%;
+}
+   }
+   @media (min-width:760px) and (max-width:1200px){
+    .upper-container1 {
+        
+        padding-top: 20px;
+        padding-bottom: 27px;
+        padding-left: 15px;
+    }
+    #setpos{
+        top: 10%;
+        left:-22%;
+        
+    }
+    .card1{
+        width: 70%;
+        position: relative;
+        left: 10%;
+        top: 8%;
+    }
+    #pos{
+        left: 45%;
+    }
+    .pos1{
+        
+        left:48%;
+    }
+    .pop-up{
+        width: 40%;
+        height: 32vh;
+    }
+    .pop-upbar{
+        font-size: 20px;
+        padding-top: 10px;
+    }
+    #add-new{
+        font-size: 22px;
+    }
+    .pop-up-button{
+        margin-left: 40%;
+    }
+    #exitButton{
+        left: 85%;
+    }
+   }
+   @media  (min-width:500px) and (max-width:760px){
+  
+    .upper-container1 {
+        
+        padding-top: 20px;
+        padding-bottom: 27px;
+        padding-left: 15px;
+    }
+    #Tasks{
+        font-weight: bold;
+        font-size: 1.8em;
+        color: rgb(44, 44, 44);
+        }
+        #list{
+            font-size: 1.8em;
+            margin-left:-2px ;
+        }
+        #setpos{
+            top: 10%;
+            left:-35%;
+            
+        }
+        #back{
+            position: inherit;
+            width: 80%;
+            height: 100%;
+            top: 0;
+            right: 0;
+            font-size: 15px;
+            opacity: 1;
+            padding-top: 21px;
+            line-height: 0;
+        }
+        #addlist{
+            display: none;
+        }
+        .card1{
+            width: 86%;
+            position: relative;
+            left: -1%;
+            top: 8%;
+        }
+        #pos{
+            left: -13%;
+            
+        }
+        .pop-up{
+            width: 90%;
+            left: 5%;
+            height: 32vh;
+        }
+        .pop-upbar{
+            font-size: 20px;
+            padding-top: 10px;
+        }
+        #add-new{
+            font-size: 22px;
+        }
+        .pop-up-button{
+            margin-left: 57%;
+        }
+        #exitButton{
+            left: 85%;
+        }
+}
+   @media  screen and (min-width:360px) and (max-width:500px) {
+    .upper-container1 {
+        
+        padding-top: 20px;
+        padding-bottom: 27px;
+        padding-left: 15px;
+    }
+    #Tasks{
+        font-weight: bold;
+        font-size: 1.8em;
+        color: rgb(44, 44, 44);
+        }
+        #list{
+            font-size: 1.8em;
+            margin-left:-2px ;
+        }
+        #setpos{
+            top: 10%;
+            left:-35%;
+        }
+        #back{
+            position: inherit;
+            width: 80%;
+            height: 100%;
+            top: 0;
+            right: 0;
+            font-size: 15px;
+            opacity: 1;
+            padding-top: 21px;
+            line-height: 0;
+        }
+        #addlist{
+            display: none;
+        }
+        .card1{
+            width: 84%;
+            position: relative;
+            left: -1%;
+            top: 8%;
+        }
+        #pos{
+            left: -15%;
+            
+        }
+        .pop-up{
+            width: 90%;
+            height: 32vh;
+            left: 5%;
+        }
+        .pop-upbar{
+            font-size: 15px;
+            padding-top: 10px;
+        }
+        #add-new{
+            font-size: 22px;
+        }
+        .pop-up-button{
+            margin-left: 42%;
+        }
+        #exitButton{
+            left: 85%;
+        }
+   }
+   
+@media (max-width:359px){
+    .upper-container1 {
+        
+        padding-top: 20px;
+        padding-bottom: 27px;
+        padding-left: 15px;
+    }
+    #Tasks{
+        font-weight: bold;
+        font-size: 1.8em;
+        color: rgb(44, 44, 44);
+        }
+        #list{
+            font-size: 1.8em;
+            margin-left:-2px ;
+        }
+        #setpos{
+            top: 10%;
+            left:-35%;
+        }
+        #back{
+            position: inherit;
+            width: 80%;
+            height: 100%;
+            top: 0;
+            right: 0;
+            font-size: 15px;
+            opacity: 1;
+            padding-top: 21px;
+            line-height: 0;
+        }
+        #addlist{
+            display: none;
+        }
+        .card1{
+            width: 84%;
+            position: relative;
+            left: -1%;
+            top: 8%;
+        }
+        #pos{
+            left: -15%;
+            
+        }
+        .pop-up{
+            width: 90%;
+            left: 5%;
+            height: 32vh;
+        }
+        .pop-upbar{
+            font-size: 20px;
+            padding-top: 10px;
+        }
+        #add-new{
+            font-size: 22px;
+        }
+        .pop-up-button{
+            margin-left: 15%;
+        }
+        #exitButton{
+            left: 85%;
+        }
+}

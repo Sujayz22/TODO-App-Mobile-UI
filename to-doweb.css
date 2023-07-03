@@ -1,0 +1,582 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+.upper-container {
+    background-color: white;
+    box-shadow: 0 5px 4px rgba(0, 0, 0, 0.1);
+    height: 10%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+}
+
+.upper-container1 {
+    width: 60%;
+    height: 100%;
+    padding-top: 27px;
+    padding-bottom: 27px;
+    padding-left: 120px;
+}
+
+.upper-container2{
+    position: absolute;
+      top: 0%;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: fit-content;
+      background-color: #f2f2f2;
+     
+} 
+
+
+#Tasks{
+font-weight: bold;
+font-size: 2.5rem;
+color: rgb(44, 44, 44);
+}
+
+#setpos{
+position: relative;
+padding-top:7%;
+padding-left: 70%;
+display: flex;
+}
+
+#list {
+font-size: 2.5rem;
+margin-left:10px ;
+font-weight: bold;
+color: rgb(0, 156, 253);
+}
+
+#addlist{
+    position: inherit;
+    width: 80%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    font-size: 25px;
+    opacity: 0.5;
+    padding-top: 25px;
+    line-height: 0;
+}
+
+.separator {
+    border-top: 1px solid #ccc;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .cards{
+display: flex;
+flex-wrap: wrap;
+flex-direction: row;
+margin-top: 1%;
+justify-content: center;
+  }
+
+.card1{
+    
+    border: 1.5px solid rgb(212, 212, 212); 
+    height: 45vh;
+    width: 26.33%;
+    position: relative;
+    border-radius: 8px;
+    margin: 30px;
+    background-color: white;
+    box-sizing: border-box;
+}
+.card1:hover{
+    box-shadow:0 0 5px 3px rgb(201, 200, 200);
+}
+.custom-link{
+    text-decoration: none;
+  color: inherit;
+}
+.div1{
+    padding: 10% 10% 3% 10%;
+    font-size: large;
+    font-weight: bold;
+    color: #00A5EC;
+    
+}
+.div2{
+    font-size: large;
+    padding: 3% 10% 3% 10%;
+    
+}
+.div3{
+    font-size: large;
+    padding: 3% 10% 3% 10%;
+}
+#check{
+    scale: 2;
+}
+.disabled{
+pointer-events: none;
+opacity: 0.5;
+text-decoration: line-through;
+color: #636161;
+
+}
+#space{
+    padding: 0% 2% 0% 0%
+}
+.cards-1{
+    display: flex;
+    width: 50%;
+    height: 50vh;
+}
+
+.notshow{
+ filter:  brightness(40%);
+ -webkit-filter: brightness(40%);
+ pointer-events: none;
+}
+.pop-up{
+    position: absolute;
+    height: 25vh;
+    width: 27%;
+    border: 1.5px solid grey;
+    border-radius: 10px;
+    left: 36.5%;
+    top: 20%;
+    background-color: white;
+    display: none;
+}
+#add-new{
+    font-size: 25px;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 15px 15px 1px 15px;
+}
+.pop-upbar {
+    width: 90%;
+    border: 1.5px solid lightgrey;
+    border-radius: 5px;
+    height: 40px;
+    font-size: 25px;
+    padding-left: 10px;
+    padding-right: 5px;
+    padding-top: 5px;
+    resize: none;
+    background-color: rgb(238, 238, 238);
+    color: rgb(107, 107, 107);
+}
+.pop-upbar:focus{
+    color: black;
+    background-color: white;
+}
+.pop-up-button{
+    padding: 12px 40px 12px 40px;
+    font-size: larger;
+    color: white;
+    background-color: #00A5EC;
+    border: none;
+    border-radius: 5px;
+    margin-top: 16px;
+    margin-left: 61%;
+}
+#exitButton{
+    position: absolute;
+    left: 90%;
+    top: 9%;
+    width: 30px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+    color: grey;
+    font-size: larger;
+    background-color: white;
+}
+#exitButton:hover{
+    scale: 1.2;
+    background-color: #ccc;
+    border-radius: 4px;
+}
+
+
+/* Media Query for smaller screens */
+@media (min-width:1600px) and (max-width:1800px){
+    .pop-up{
+        height: 30vh;
+    }
+    .pop-up-button{
+        margin-left: 55%;
+}
+}
+@media (min-width:1200px) and (max-width:1600px){
+.pop-up{
+    width: 40%;
+    height: 32vh;
+}
+}
+@media (min-width:760px) and (max-width:1200px){
+    #setpos{
+        position: relative;
+        padding-top:14%;
+        padding-left: 45%;
+        }
+        .card1{
+            width: 40%;
+        }
+        .pop-up{
+            height: 32vh;
+            width: 40%;
+            left: 32%;
+        }
+        .pop-up-button{
+            padding: 12px 40px 12px 40px;
+            font-size: larger;
+            color: white;
+            background-color: #00A5EC;
+            border: none;
+            border-radius: 5px;
+            margin-top: 29px;
+            margin-left: 35%;
+        }
+        .pop-upbar {
+            width: 90%;
+            border: 1.5px solid lightgrey;
+            border-radius: 5px;
+            height: 40px;
+            font-size: 16px;
+            padding-left: 10px;
+            padding-right: 5px;
+            padding-top: 10px;
+        }
+        #add-new{
+            font-size: 24px;
+            font-weight: 500;
+            padding: 15px 15px 1px 15px;
+        }
+        #exitButton{
+            position: absolute;
+            left: 85%;
+            top: 6%;
+            width: 30px;
+            height: 30px;
+        }
+
+}
+@media (min-width:400px) and (max-width:760px){
+    .upper-container {
+        background-color: white;
+        box-shadow: 0 5px 4px rgba(0, 0, 0, 0.1);
+        height: 8%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 99;
+    }
+    #Tasks{
+        font-weight: bold;
+        font-size: 1.6rem;
+        color: rgb(44, 44, 44);
+        }
+
+        #list {
+            font-size: 1.6rem;
+            margin-left:2px ;
+            font-weight: bold;
+            color: rgb(0, 156, 253);
+            }
+    .upper-container1{
+        display: inline-block;
+        position: absolute;
+        margin-top: -4px;
+        padding-left:13px;
+    }
+    #setpos{
+        position: relative;
+        padding-top:23%;
+        padding-left: 45%;
+        display: flex;
+        }
+    #addlist{
+        display: none;
+    }
+    .card1{
+    
+        border: 1.5px solid rgb(212, 212, 212); 
+        height: 45vh;
+        width: 90%;
+        position: relative;
+        border-radius: 8px;
+        margin: 30px;
+        background-color: white;
+        box-sizing: border-box;
+    }
+    .cards{
+        margin-top: -8px;
+    }
+.pop-up{
+    width: 80%;
+    left: 10%;
+    height: 32vh;
+}
+.pop-up-button{
+    margin-left: 35%;
+}
+}
+@media (min-width:360px) and (max-width:400px){
+    .upper-container {
+        background-color: white;
+        box-shadow: 0 5px 4px rgba(0, 0, 0, 0.1);
+        height: 8%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 99;
+    }
+    #Tasks{
+        font-weight: bold;
+        font-size: 1.6rem;
+        color: rgb(44, 44, 44);
+        }
+
+        #list {
+            font-size: 1.6rem;
+            margin-left:2px ;
+            font-weight: bold;
+            color: rgb(0, 156, 253);
+            }
+    .upper-container1{
+        display: inline-block;
+        position: absolute;
+        margin-top: -4px;
+        padding-left:13px;
+    }
+    #setpos{
+        position: relative;
+        padding-top:23%;
+        padding-left: 45%;
+        display: flex;
+        }
+    #addlist{
+        display: none;
+    }
+    .card1{
+    
+        border: 1.5px solid rgb(212, 212, 212); 
+        height: 45vh;
+        width: 90%;
+        position: relative;
+        border-radius: 8px;
+        margin: 30px;
+        background-color: white;
+        box-sizing: border-box;
+    }
+    .cards{
+        margin-top: -8px;
+    }
+    .pop-up{
+        height: 32vh;
+        width: 90%;
+        left: 5%;
+    }
+    .pop-up-button{
+        padding: 12px 40px 12px 40px;
+        font-size: larger;
+        color: white;
+        background-color: #00A5EC;
+        border: none;
+        border-radius: 5px;
+        margin-top: 29px;
+        margin-left: 40%;
+    }
+    .pop-upbar {
+        width: 90%;
+        border: 1.5px solid lightgrey;
+        border-radius: 5px;
+        height: 40px;
+        font-size: 16px;
+        padding-left: 10px;
+        padding-right: 5px;
+        padding-top: 10px;
+    }
+    #add-new{
+        font-size: 20px;
+        font-weight: 500;
+        padding: 15px 15px 1px 15px;
+    }
+    #exitButton{
+        position: absolute;
+        left: 88%;
+        top: 6%;
+        width: 30px;
+        height: 30px;
+    }
+}
+@media screen and (min-width:280px) and (max-width:359px){
+    .upper-container {
+        background-color: white;
+        box-shadow: 0 5px 4px rgba(0, 0, 0, 0.1);
+        height: 8%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 99;
+    }
+    #Tasks{
+        font-weight: bold;
+        font-size: 1.6rem;
+        color: rgb(44, 44, 44);
+        }
+
+        #list {
+            font-size: 1.6rem;
+            margin-left:2px ;
+            font-weight: bold;
+            color: rgb(0, 156, 253);
+            }
+    .upper-container1{
+        display: inline-block;
+        position: absolute;
+        margin-top: -4px;
+        padding-left:13px;
+    }
+    #setpos{
+        position: relative;
+        padding-top:23%;
+        padding-left: 45%;
+        display: flex;
+        }
+    #addlist{
+        display: none;
+    }
+    .card1{
+    
+        border: 1.5px solid rgb(212, 212, 212); 
+        height: 45vh;
+        width: 90%;
+        position: relative;
+        border-radius: 8px;
+        margin: 30px;
+        background-color: white;
+        box-sizing: border-box;
+    }
+    .cards{
+        margin-top: -8px;
+    }
+    .pop-up{
+        height: 32vh;
+        width: 90%;
+        left: 5%;
+    }
+    .pop-up-button{
+        padding: 12px 40px 12px 40px;
+        font-size: larger;
+        color: white;
+        background-color: #00A5EC;
+        border: none;
+        border-radius: 5px;
+        margin-top: 29px;
+        margin-left: 26%;
+    }
+    .pop-upbar {
+        width: 90%;
+        border: 1.5px solid lightgrey;
+        border-radius: 5px;
+        height: 40px;
+        font-size: 16px;
+        padding-left: 10px;
+        padding-right: 5px;
+        padding-top: 10px;
+    }
+    #add-new{
+        font-size: 20px;
+        font-weight: 500;
+        padding: 15px 15px 1px 15px;
+    }
+    #exitButton{
+        position: absolute;
+        left: 88%;
+        top: 6%;
+        width: 30px;
+        height: 30px;
+    }
+}
+@media (max-width:280px){
+    #Tasks{
+        font-weight: bolder;
+        font-size: 1.5rem;
+        color: rgb(44, 44, 44);
+        }
+
+        #list {
+            font-size: 1.5rem;
+            margin-left:2px ;
+            font-weight: bolder;
+            color: rgb(0, 156, 253);
+            }
+            .upper-container1{
+                display: inline-block;
+                position: absolute;
+                margin-top: -2px;
+                padding-left:13px;
+                width: 60%;
+                
+            }
+            #setpos{
+                
+                padding-left: 43%;
+                }
+           .card1{
+            width: 90%;
+           }
+           #setpos{
+            padding-top:40%;
+            padding-left: 40%;
+            }
+            #addlist{
+                display: none;
+            }
+            .pop-up{
+                height: 35vh;
+                width: 90%;
+                left: 4.5%;
+            }
+            .pop-up-button{
+                padding: 12px 40px 12px 40px;
+                font-size: larger;
+                color: white;
+                background-color: #00A5EC;
+                border: none;
+                border-radius: 5px;
+                margin-top: 29px;
+                margin-left: 12%;
+            }
+            .pop-upbar {
+                width: 90%;
+                border: 1.5px solid lightgrey;
+                border-radius: 5px;
+                height: 40px;
+                font-size: 16px;
+                padding-left: 10px;
+                padding-right: 5px;
+                padding-top: 10px;
+            }
+            #add-new{
+                font-size: 20px;
+                font-weight: 500;
+                padding: 15px 15px 1px 15px;
+            }
+            #exitButton{
+                position: absolute;
+                left: 80%;
+                top: 6%;
+                width: 30px;
+                height: 30px;
+            }
+}
